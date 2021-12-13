@@ -1,0 +1,5 @@
+hello_velir.node_entity:
+ class: Drupal\\hello_velir\\Normalizer\\NodeEntityNormalizer
+  arguments: ['@entity.manager']
+  tags:
+    - { name: normalizer, priority: 8 }

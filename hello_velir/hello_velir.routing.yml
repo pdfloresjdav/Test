@@ -1,0 +1,28 @@
+hello_velir.first:
+  path: '/hello-velir-1'
+  defaults:
+    _controller: '\Drupal\hello_velir\Controller\HelloVelirController::fistContent'
+    _title: 'Hello Velir First'
+  requirements:
+    _permission: 'access content'
+hello_velir.second:
+  path: '/hello-velir-2'
+  defaults:
+    _controller: '\Drupal\hello_velir\Controller\HelloVelirController::secondContent'
+    _title: 'Hello Velir Second'
+  requirements:
+    _permission: 'access content'
+hello_velir.third:
+  path: '/hello-velir-3'
+  defaults:
+    _controller: '\Drupal\hello_velir\Controller\HelloVelirController::thirdContent'
+    _title: 'Hello Velir Third'
+  requirements:
+    _permission: 'administer hello_velir config settings'
+hello_velir.settings:
+  path: '/admin/config/services/hello_velir'
+  defaults:
+    _form: '\Drupal\hello_velir\Form\HelloVelirConfigForm'
+    _title: 'Hello Velir Config settings'
+  requirements:
+    _permission: 'administer hello_velir config settings'

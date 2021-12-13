@@ -1,0 +1,4 @@
+name: "Hellow Velir"
+description: "We are going to be Drupal 8 module for Pedro Flores test"
+type: module
+core: 8.x

@@ -1,0 +1,23 @@
+<?php
+
+/**
+ * Implements hook_entity_base_field_info_alter().
+ */
+function hello_velir_entity_bundle_field_info(\Drupal\Core\Entity\EntityTypeInterface $entity_type, $bundle, array $base_field_definitions) {
+  if ($entity_type->id() == 'node' && $bundle == 'article') {
+    $fields = array();
+    $fields['subtitle'] = BaseFieldDefinition::create('string')
+      ->setLabel(t('Subtitle'))
+      ->setComputed(TRUE)
+      ->setClass('\\Drupal\\mymodule\\EntityComputedMoreText');
+    return $fields;
+  }
+}
+
+function hello_velir_views_pre_render(ViewExecutable $view) {
+
+  // Scramble the order of the rows shown on this result page.
+  // Note that this could be done earlier, but not later in the view execution
+  // process.
+  //shuffle($view->result);
+}
